@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         float directionY = Input.GetAxisRaw("Vertical");
         playerDirections = new Vector2(0, directionY).normalized;
+       
     }
 
     void FixedUpdate()
