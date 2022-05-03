@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ObstacleInteractions : MonoBehaviour
 {
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,13 @@ public class ObstacleInteractions : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        else if(collision.tag == "Player")
+        {
+            Destroy(player.gameObject);
+        }
+
     }
+
         
 }
