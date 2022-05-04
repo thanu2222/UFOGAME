@@ -13,9 +13,9 @@ public class ObstacleInteractions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Border"))
+        if(collision.tag == ("Border"))
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
         else if(collision.tag == "Player")
