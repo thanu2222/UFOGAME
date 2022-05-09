@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ObstacleSpawning : MonoBehaviour
 {
+    // This variable will contain obstacles that are going to spawn
     public GameObject obstacle;
+    // This variable will make the obstacles spawn within this range
     public float maxX;
     public float minX;
     public float maxY;
     public float minY;
+    // This variable will dictate how much time will be taken to spawn the next variable
     public float timeBetweenSpawn;
     private float spawnTime;
 
@@ -25,6 +28,7 @@ public class ObstacleSpawning : MonoBehaviour
 
     void Spawn()
     {
+        // This will allow the obstacles to not spawn on the same posistion 
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
