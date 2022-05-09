@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText; 
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI PanelScoreText;
     private float score;
     
     // Update is called once per frame
@@ -15,7 +16,8 @@ public class ScoreManager : MonoBehaviour
         {
             score += 1 * Time.deltaTime;
             scoreText.text = ((int)score).ToString();
-        
+            PanelScoreText.text = ((int)score).ToString();
+
         } 
     }
 }
