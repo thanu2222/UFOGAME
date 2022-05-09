@@ -18,8 +18,10 @@ public class ObstacleSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Checking the time passsed is greater the spawn time
         if(Time.time > spawnTime)
         {
+            // Calling the spawn fucntion when its greater 
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
 
@@ -31,7 +33,7 @@ public class ObstacleSpawning : MonoBehaviour
         // This will allow the obstacles to not spawn on the same posistion 
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
-
+        // Spawning a new obeject
         Instantiate(obstacle, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
     }
 }

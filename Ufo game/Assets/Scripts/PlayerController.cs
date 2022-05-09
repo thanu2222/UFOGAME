@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // Called once per physics frame
     void FixedUpdate()
     {
+        // Speed of the rigidbody
         rb.velocity = new Vector2(0, playerDirections.y * playerSpeed);
     
    
